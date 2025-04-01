@@ -6,28 +6,29 @@
 
         <link rel="stylesheet" href="style.css">
     </head>
-<body>
+    <body>
 
-<div class="polaroid">
-<video id="video" autoplay muted playsinline></video>
-<div class="caption">A person, who couldn't solve the captcha</div>
-</div>
+    <div class="polaroid">
+        <video id="video" autoplay muted playsinline></video>
+        
+        <div class="caption">A person, who couldn't solve the captcha</div>
+    </div>
 
-<script>
-const video = document.getElementById('video');
+    <script>
+        const video = document.getElementById('video');
 
-async function startCamera() {
-try {
-const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-video.srcObject = stream;
-} catch (err) {
-alert('Camera access denied or not available.');
-console.error(err);
-}
-}
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+            } catch (err) {
+                alert('Camera access denied or not available.');
+                console.error(err);
+            }
+        }
 
-startCamera();
-</script>
+        startCamera();
+    </script>
 
-</body>
+    </body>
 </html>
