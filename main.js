@@ -48,7 +48,7 @@ $(function() {
 
         if (timeLeft <= 0) {
             clearInterval(timer);
-            console.log( "too slow" );
+            location.href = "https://www.youtube.com/watch?v=MmNMiZ2g2zs"
             input.disabled = true;
         }
     }, 1000);
