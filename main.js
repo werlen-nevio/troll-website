@@ -81,7 +81,7 @@ function checkCaptcha() {
             showLoadingThenRickroll();
         }
     } else {
-        console.log( "falscher input" );
+        location.href = "fail/index.html"
     }
 }
 
